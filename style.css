@@ -1,0 +1,136 @@
+body {
+    font-family: "Asap Sharp", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    background-color: #bfcff7;
+    scroll-behavior: smooth;
+}
+
+header {
+    color: rgb(253, 254, 255);
+    display: flex;
+    border-radius: 5px;
+    background-color: #3268a5;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    margin-left: auto;
+    padding: 0px 15px;
+    gap: 20px;
+}
+
+.mountain-img {
+    height: 60px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(214, 214, 214);
+}
+
+.herobanner-sec {
+    border-radius: 5px;
+    background-image: url('images/greece.jpg');
+    height: 300px;
+}
+
+.herobanner-sec h2 {
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.herobanner-sec h1 {
+    position: absolute;
+    top: 170px;
+    left: 50px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.contact-button {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    background-color: #60abe9;
+    width: 150px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50px;
+}
+
+.herobanner-sec h3 {
+    position: absolute;
+    top: 230px;
+    left: 50px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.destinations-sec {
+    padding: 2px 15px;
+    background-color: white;
+    border-radius: 5px;
+    height: 430px;
+}
+
+.destinations-sec h3 {
+    color: #A6B0BB;
+}
+
+.Paris-card {
+    width: 360px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    margin: auto;
+}
+
+.paris-img {
+    width: 100%;
+    height: 200px;
+    object-fit:cover;
+    display:block;
+}
+
+.Paris-card-content {
+    padding: 1px 15px;
+    line-height: 10px;
+    text-align: center;
+}
+
+.paris-a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #333333;
+    background-color: #79c2e4;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease; 
+}
+
+.paris-a:hover {
+    transform: scale(1.1);
+}
