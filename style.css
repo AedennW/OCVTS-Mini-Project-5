@@ -114,7 +114,8 @@ header nav a:hover {
 }
 
 .Paris-card,
-.Banff-card {
+.Banff-card,
+.Tokyo-card {
     box-sizing: border-box;
     width: 360px;
     max-width: 100%;
@@ -128,7 +129,8 @@ header nav a:hover {
 }
 
 .paris-img,
-.banff-img {
+.banff-img,
+.tokyo-img {
     display: block;
     width: 100%;
     height: 200px;
@@ -136,25 +138,29 @@ header nav a:hover {
 }
 
 .Paris-card-content,
-.Banff-card-content {
+.Banff-card-content,
+.Tokyo-card-content {
     padding: 1px 15px 20px;
     line-height: normal;
     text-align: center;
 }
 
 .main-text-paris,
-.main-text-banff {
+.main-text-banff,
+.main-text-tokyo {
     margin: 15px 0 8px;
 }
 
 .secondary-text-paris,
-.secondary-text-banff {
+.secondary-text-banff,
+.secondary-text-tokyo {
     margin: 8px 0 18px;
     color: #A6B0BB;
 }
 
 .paris-a,
-.banff-a {
+.banff-a,
+.tokyo-a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -173,7 +179,8 @@ header nav a:hover {
 }
 
 .paris-a:hover,
-.banff-a:hover {
+.banff-a:hover,
+.tokyo-a:hover {
     transform: scale(1.05);
 }
 
