@@ -282,3 +282,283 @@ h4 {
   margin-top: 14px;
 }
 
+
+/* Chapter 7: Dynamic Gallery / Showcase */
+.gallery-tools {
+  background-color: #eef5fb;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+}
+
+.search-sort {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+  margin-bottom: 20px;
+}
+
+.search-sort label {
+  font-weight: 600;
+  color: #14283e;
+}
+
+.search-sort input,
+.search-sort select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd8e6;
+  border-radius: 9px;
+  font: inherit;
+  background: #ffffff;
+  color: #14283e;
+}
+
+.filter-area p {
+  font-weight: 600;
+  color: #14283e;
+  margin-bottom: 10px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-button,
+.favorite-link {
+  border: 1px solid #cbd8e6;
+  background: #ffffff;
+  color: #24415f;
+  padding: 9px 17px;
+  border-radius: 999px;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-button:hover,
+.filter-button.active-filter {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.result-count {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #52677d;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.gallery-card {
+  background: #ffffff;
+  border: 1px solid #e3ecf5;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(13, 33, 55, 0.08);
+  animation: cardAppear 0.45s ease both;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(13, 33, 55, 0.15);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+}
+
+.gallery-card-content {
+  padding: 18px;
+}
+
+.gallery-tag {
+  display: inline-block;
+  background: #e7f0ff;
+  color: #1d4ed8;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.gallery-card h3 {
+  margin-top: 10px;
+}
+
+.gallery-country {
+  color: #64748b;
+  font-size: 0.88rem;
+}
+
+.gallery-description {
+  margin: 10px 0;
+  min-height: 52px;
+  font-size: 0.92rem;
+}
+
+.gallery-rating {
+  color: #a16207;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.gallery-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.details-button,
+.favorite-button {
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.details-button {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.favorite-button {
+  background: #eef5fb;
+  color: #24415f;
+}
+
+.favorite-button.saved {
+  background: #ffe8ee;
+  color: #be123c;
+}
+
+.details-button:hover,
+.favorite-button:hover {
+  transform: translateY(-2px);
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 35px;
+  background: #eef5fb;
+  border-radius: 12px;
+}
+
+.favorites-section {
+  padding: 55px 0;
+  background: #eef5fb;
+}
+
+.favorites-section h2 {
+  margin-bottom: 8px;
+}
+
+.favorites-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.details-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(7, 20, 35, 0.72);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-modal.show-modal {
+  display: flex;
+  animation: fadeIn 0.25s ease;
+}
+
+.details-box {
+  position: relative;
+  background: #ffffff;
+  color: #4a5a6d;
+  width: 100%;
+  max-width: 560px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  border-radius: 18px;
+  animation: cardAppear 0.3s ease;
+}
+
+.details-box h2 {
+  margin: 8px 35px 14px 0;
+}
+
+.details-box h3 {
+  margin-top: 18px;
+}
+
+.details-box ul {
+  padding-left: 22px;
+  margin: 8px 0 16px;
+}
+
+.close-details {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  border: 0;
+  background: transparent;
+  color: #14283e;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.details-fact {
+  background: #eef5fb;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.site-footer {
+  padding: 22px;
+  text-align: center;
+  background: #0d2137;
+  color: #dbe7f3;
+}
+
+@keyframes cardAppear {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .search-sort {
+    grid-template-columns: 1fr;
+  }
+
+  .details-box {
+    padding: 24px 20px;
+  }
+}
