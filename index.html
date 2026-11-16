@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
-
   <header class="site-header">
     <nav class="nav">
       <a href="#top" class="brand">
@@ -21,7 +20,8 @@
       <ul class="nav-links">
         <li><a href="#top">Home</a></li>
         <li><a href="#featured">Featured</a></li>
-        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#destinations">Gallery</a></li>
+        <li><a href="#favorites">Favorites</a></li>
       </ul>
     </nav>
   </header>
@@ -30,19 +30,17 @@
     <div class="hero-inner container">
       <h1>Discover Amazing Destinations</h1>
       <p class="hero-text">
-        I made a page about five places I hope to visit someday.
-        Scroll down to learn about each one.
+        Explore places around the world, search for a destination, and save your favorites.
       </p>
       <a href="#destinations" class="btn">Explore Destinations</a>
     </div>
   </section>
 
   <main>
-
     <section class="featured" id="featured">
       <div class="container section-head">
         <h2>Featured Destination</h2>
-        <p class="section-sub">Out of my five destinations, this is the one I would visit first.</p>
+        <p class="section-sub">Paris is the place I would visit first.</p>
       </div>
       <div class="container">
         <article class="featured-card">
@@ -55,124 +53,90 @@
             <h3>Paris, the City of Lights</h3>
             <p class="featured-desc">
               Paris is one of the most famous cities in the world. People travel there for
-              the Eiffel Tower, the art, the old buildings, and the amazing food. I picked
-              it as my featured destination because there is so much to do in one city,
-              from museums to cafes to small shops on cobblestone streets.
+              the Eiffel Tower, the art, the old buildings, and the amazing food. There is
+              so much to do, from museums to cafes to small shops on cobblestone streets.
             </p>
             <h4>Top Things to Do</h4>
             <ul>
               <li>Watch the sunset from the Eiffel Tower</li>
               <li>See the Mona Lisa at the Louvre Museum</li>
               <li>Take a boat ride down the Seine River</li>
-              <li>Walk around the artist area of Montmartre</li>
+              <li>Walk around Montmartre</li>
             </ul>
             <div class="tip">
-              <strong>Travel Tip:</strong> Buy your museum tickets online before you go so
-              you can skip the long lines. Try to visit in April or October when the city
-              is less crowded.
+              <strong>Travel Tip:</strong> Check ticket times before visiting popular museums
+              and attractions.
             </div>
-            <a href="#destinations" class="btn">Plan Your Trip</a>
+            <a href="#destinations" class="btn">Explore the Gallery</a>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- Chapter 7: Dynamic Gallery / Showcase -->
     <section class="destinations" id="destinations">
       <div class="container section-head">
-        <h2>Top Destinations</h2>
-        <p class="section-sub">These are five places around the world that I would love to travel to someday.</p>
+        <p class="eyebrow">Explore the world</p>
+        <h2>Destination Gallery</h2>
+        <p class="section-sub">Use the filters, search, and sorting menu to find a place you want to explore.</p>
       </div>
-      <div class="container cards">
 
-        <article class="card">
-          <img class="card-img" src="images/paris-france.jpg" alt="Eiffel Tower in Paris at sunset">
-          <div class="card-body">
-            <h3>Paris</h3>
-            <p class="card-place">France</p>
-            <p class="card-desc">Paris is full of famous buildings, long history, and really good food.</p>
-            <h4>Things to Do</h4>
-            <ul>
-              <li>Visit the Eiffel Tower</li>
-              <li>Explore the Louvre Museum</li>
-              <li>Walk along the Seine River</li>
-              <li>Eat French food at a cafe</li>
-            </ul>
-            <p class="fun-fact"><strong>Fun fact:</strong> The Eiffel Tower was only supposed to stand for 20 years. The city almost tore it down in 1909.</p>
+      <div class="container gallery-tools">
+        <div class="search-sort">
+          <label for="gallerySearch">Search destinations</label>
+          <input type="search" id="gallerySearch" placeholder="Search by name, country, or keyword...">
+          <label for="gallerySort">Sort by</label>
+          <select id="gallerySort">
+            <option value="az">A to Z</option>
+            <option value="newest">Newest</option>
+            <option value="highest">Highest Rated</option>
+            <option value="lowest">Lowest Rated</option>
+          </select>
+        </div>
+
+        <div class="filter-area">
+          <p>Filter by category</p>
+          <div class="filter-buttons">
+            <button class="filter-button active-filter" data-category="All">All</button>
+            <button class="filter-button" data-category="City">Cities</button>
+            <button class="filter-button" data-category="Nature">Nature</button>
+            <button class="filter-button" data-category="Island">Islands</button>
           </div>
-        </article>
-
-        <article class="card">
-          <img class="card-img" src="images/banff.jpg" alt="Turquoise mountain lake surrounded by pine forests in Banff">
-          <div class="card-body">
-            <h3>Banff</h3>
-            <p class="card-place">Canada</p>
-            <p class="card-desc">Banff is a mountain town with bright blue lakes and tons of outdoor activities to try.</p>
-            <h4>Things to Do</h4>
-            <ul>
-              <li>Hike to Lake Louise</li>
-              <li>Drive the Icefields Parkway</li>
-              <li>Go canoeing on Moraine Lake</li>
-              <li>Look for bears and elk</li>
-            </ul>
-            <p class="fun-fact"><strong>Fun fact:</strong> Banff was Canada's very first national park. It was created all the way back in 1885.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="card-img" src="images/tokyo-japan.jpg" alt="Tokyo city skyline glowing at night">
-          <div class="card-body">
-            <h3>Tokyo</h3>
-            <p class="card-place">Japan</p>
-            <p class="card-desc">Tokyo is a huge city where old temples and traditions mix with neon lights and new technology.</p>
-            <h4>Things to Do</h4>
-            <ul>
-              <li>Visit the Sensoji Temple</li>
-              <li>Cross the famous Shibuya Crossing</li>
-              <li>Try real sushi and ramen</li>
-              <li>See the view from Tokyo Skytree</li>
-            </ul>
-            <p class="fun-fact"><strong>Fun fact:</strong> Tokyo has more Michelin star restaurants than any other city in the world.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="card-img" src="images/maui-hawaii.webp" alt="Palm trees and blue water along a Maui beach">
-          <div class="card-body">
-            <h3>Maui</h3>
-            <p class="card-place">Hawaii, USA</p>
-            <p class="card-desc">Maui has clean beaches, green mountains, and a relaxed island feel.</p>
-            <h4>Things to Do</h4>
-            <ul>
-              <li>Relax on Kaanapali Beach</li>
-              <li>Watch the sunrise on Haleakala volcano</li>
-              <li>Go snorkeling or scuba diving</li>
-              <li>Drive the Road to Hana</li>
-            </ul>
-            <p class="fun-fact"><strong>Fun fact:</strong> Haleakala means "House of the Sun" in Hawaiian. The volcano is over 10,000 feet tall.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="card-img" src="images/greece.jpg" alt="White buildings on the cliffs of Santorini, Greece at sunset">
-          <div class="card-body">
-            <h3>Santorini</h3>
-            <p class="card-place">Greece</p>
-            <p class="card-desc">Santorini has white buildings, blue roofs, and some of the best sunsets in the world.</p>
-            <h4>Things to Do</h4>
-            <ul>
-              <li>Watch the sunset in Oia</li>
-              <li>Hike the trail along the cliffs</li>
-              <li>Swim at Red Beach</li>
-              <li>Visit the ancient ruins of Akrotiri</li>
-            </ul>
-            <p class="fun-fact"><strong>Fun fact:</strong> Santorini is actually the leftover rim of a giant volcano. The harbor sits inside the old crater.</p>
-          </div>
-        </article>
-
+        </div>
+        <p id="resultCount" class="result-count">6 destinations found</p>
       </div>
+
+      <div class="container gallery-grid" id="destinationGallery"></div>
     </section>
 
+    <section class="favorites-section" id="favorites">
+      <div class="container">
+        <h2>My Favorite Destinations</h2>
+        <p>Save places by pressing the Favorite button on a gallery card.</p>
+        <div id="favoritesList" class="favorites-list">You have not saved any destinations yet.</div>
+      </div>
+    </section>
   </main>
 
+  <!-- Chapter 7: Destination details popup -->
+  <div class="details-modal" id="detailsModal" aria-hidden="true">
+    <div class="details-box" role="dialog" aria-modal="true" aria-labelledby="detailsTitle">
+      <button class="close-details" id="closeDetails" aria-label="Close details">×</button>
+      <p class="eyebrow">Destination details</p>
+      <h2 id="detailsTitle">Destination</h2>
+      <p id="detailsDescription"></p>
+      <h3>Things to Do</h3>
+      <ul id="detailsThings"></ul>
+      <p id="detailsFact" class="details-fact"></p>
+      <p id="detailsRating"></p>
+      <p id="detailsYear"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>TravelExplore | OCVTS Computer Science</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
